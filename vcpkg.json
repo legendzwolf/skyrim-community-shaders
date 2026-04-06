@@ -51,7 +51,7 @@
         },
         {
             "name": "imgui",
-            "version": "1.92.6"
+            "version": "1.92.7"
         },
         {
             "name": "tracy",
@@ -62,5 +62,5 @@
             "version": "1.614.1"
         }
     ],
-    "builtin-baseline": "dddca6fa87f177e0678e2545c4b4636a44aa05bd"
+    "builtin-baseline": "81e3c888ef717a026eb57bb2f3cb0dbd30246271"
 }
