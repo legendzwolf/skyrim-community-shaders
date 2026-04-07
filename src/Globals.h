@@ -34,6 +34,7 @@ struct ExtendedTranslucency;
 struct Upscaling;
 struct WeatherEditor;
 struct ExponentialHeightFog;
+struct DepthOfField;
 
 class State;
 class Deferred;
@@ -91,6 +92,7 @@ namespace globals
 		extern RenderDoc renderDoc;
 		extern WeatherEditor weatherEditor;
 		extern ExponentialHeightFog exponentialHeightFog;
+		extern DepthOfField depthOfField;
 
 		namespace llf
 		{

@@ -10,6 +10,7 @@
 #include "Features/IBL.h"
 #include "Features/ScreenSpaceGI.h"
 #include "Features/Skylighting.h"
+#include "Features/DepthOfField.h"
 #include "Features/SubsurfaceScattering.h"
 #include "Features/TerrainBlending.h"
 #include "Features/Upscaling.h"
@@ -425,6 +426,13 @@ void Deferred::DeferredPasses()
 
 	if (dynamicCubemaps.loaded)
 		dynamicCubemaps.PostDeferred();
+
+	// Depth of Field – runs after the deferred composite so it blurs the fully-lit scene
+	{
+		auto& dof = globals::features::depthOfField;
+		if (dof.loaded)
+			dof.DrawDoF();
+	}
 }
 
 void Deferred::EndDeferred()
